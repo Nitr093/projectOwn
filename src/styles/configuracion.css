@@ -46,7 +46,9 @@ body {
 h1 {
     font-family: "Boldonse", system-ui !important;
     padding-right: 10px !important;
-    font-size: 1.4em;    
+    font-size: 1.4em;   
+    display: flex;
+    justify-content: end; 
 }
 
 h1 a{
@@ -90,16 +92,21 @@ h2 {
 }
 
 
+.horario{    
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: left;
+    font-family: "Comic Relief", system-ui;
+    color: rgb(168, 255, 255);
+    font-size: 1.2em;
+}
 
 
 header {
-    padding: 16px 0;
     /*1rem 0*/
     border-bottom: 2px solid rgb(173, 247, 2);
     background-image:  url("wallpaperflare.com_wallpaper.jpg");
-    display: flex;
-    flex-direction: column;
-    align-items: end;
 }
 
 h3 {
@@ -213,7 +220,6 @@ main {
     text-decoration: none;
     display: flex;
     justify-content: center;
-
 }
 
 .cuerpo-main a img {
@@ -361,6 +367,9 @@ main {
 @media screen and (max-width:960px) {
 
 
+
+
+
     h2{         
     display: flex;
     flex-wrap: wrap-reverse;
@@ -409,7 +418,17 @@ main {
         align-items: center;
     }
 
+header{
+        padding-bottom: 20px;
+    }
 
+
+    .tituloHeader{
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        align-items: end;
+    }
 }
 
 
@@ -419,6 +438,9 @@ main {
     .card {
         width: 100% !important;
     }
+
+
+    
 
 
 }
@@ -451,11 +473,24 @@ main {
         padding: 16px 0;
         /*1rem 0*/
         border-bottom: 2px solid rgb(173, 247, 2);
-        background-image: url("wallpaperflare.com_wallpaper.jpg");
-        display: flex;
-        justify-content: end;
+        background-image: url("wallpaperflare.com_wallpaper.jpg");        
     }
+.tituloHeader{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+}
 
+.horario{    
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    font-family: "Comic Relief", system-ui;
+    color: rgb(168, 255, 255);
+    font-size: 1.2em;
+}
     .barraInicio {
         background-color: black;
     }
@@ -532,6 +567,7 @@ main {
     .caja-padre-hard {
         display: flex;
         justify-content: center;
+    
     }
 
     .caja-hijo-hard {

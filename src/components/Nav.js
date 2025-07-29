@@ -12,6 +12,7 @@ const Nav = (props) => {
                     </ul>
                 </div>
             </nav>
+            <script src="https://kit.fontawesome.com/a77bfc87b2.js" crossorigin="anonymous"></script>
         </>
     )
 };

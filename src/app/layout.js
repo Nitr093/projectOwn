@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/configuracion.css";
+import moment from "moment";
 
 export const metadata = {
   title: "[NeuralNode];",
@@ -10,22 +11,28 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const now = moment().format("LLLL");
+    
   return (
     <html lang="en">
       <body>
         <header>
-          <div>
-            <h1><a href="/">[NeuralNode];</a></h1>
+          <div className="horario">
+          <p>{now}</p>
           </div>
-          <p>Centro neurálgico del conocimiento digital, libre para todos.</p>
+          <div className="tituloHeader">
+            <h1><a href="/">[NeuralNode];</a></h1>
+            <p>Centro neurálgico del conocimiento digital, libre para todos.</p>
+          </div>
+          
         </header>
 
         <Nav />
 
         {children}
 
-
         <Footer />
+        <script src="https://kit.fontawesome.com/a77bfc87b2.js" crossOrigin="anonymous"></script>
       </body>
     </html>
   );
